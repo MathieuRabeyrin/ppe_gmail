@@ -1,0 +1,126 @@
+:root {
+    --navBtnColorSelected: #dd5347;
+}
+
+header {
+    height: 100vh;
+    background: url(../assets/home-hero.jpg) fixed no-repeat;
+    background-size: cover;
+}
+
+header nav ul {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #ffffff;
+    height: 5.5rem;
+    width: 100%;
+    box-shadow: 0 0 0.5rem #222;
+    z-index: 1;
+}
+
+header nav ul li a {
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li a {
+    text-transform: uppercase;
+    color: gray;
+    height: 100%;
+    padding: 0 3rem;
+}
+
+header nav ul li:first-child {
+    margin-right: auto;
+}
+
+header nav ul li:first-child a {
+    text-transform: capitalize;
+    padding: 0;
+    margin-left: 1.5rem;
+}
+
+header nav ul li:first-child a::before {
+    content: url(../assets/mail.png);
+    margin-right: 0.5rem;
+}
+
+header section {
+    top: 30%;
+    position: absolute;
+    left: 10%;
+    max-width: 30%;
+}
+
+header section h1 {
+    color: #fafafa;
+    font-weight: 300;
+    line-height: 4.5rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+header section a {
+    color: #fafafa;
+    background-color: var(--navBtnColorSelected);
+    display: inline-block;
+    padding: 1.5rem;
+}
+
+.selected {
+    background-color: var(--navBtnColorSelected);
+    color: #fafafa;
+}
+
+footer {
+    height: 100vh;
+}
+
+footer section {
+    max-width: 70rem;
+    margin: 0 auto;
+    padding-top: 10rem;
+}
+
+footer section div {
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+}
+
+footer section h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+footer section p {
+    text-align: center;
+}
+
+footer section form fieldset {
+    border: solid 0.1rem #222;
+    border-radius: 0.5rem;
+}
+
+footer section form fieldset input {
+    display: block;
+    width: 100%;
+    line-height: 3.5rem;
+    border: none;
+    
+}
+
+footer section form fieldset input:not(:last-child) {
+    border-bottom: solid 0.1rem green;
+    background-color: gray;
+    margin-bottom: 1rem;
+}
+
+footer section form fieldset input[type="submit"] {
+    margin: 0 auto;
+    background-color: blue;
+    color: #ffffff;
+    margin-top: 0.5rem;
+    width: 40%;
+}

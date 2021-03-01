@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="gmail single page">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">gmail</a></li>
+                <li><a href="#">pour les pros</a></li>
+                <li><a href="#">connexion</a></li>
+                <li><a href="#create" class="selected">créer un compte</a></li>
+            </ul>
+        </nav>
+        <section>
+            <h1>Retrouvez la fluidité et la simplicité de Gmail sur tous vos appareils</h1>
+            <a href="#">CREER UN COMPTE</a>
+        </section>
+    </header>
+    <footer id="create">
+        <section>
+            <div>
+                <h2>Une boite de réception entièrement repensée</h2>
+                <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité</p>
+            </div>
+            <form action="" method="POST">
+                <fieldset>
+                    <legend>Créer un compte</legend>
+                    <label for="nom">Nom *</label>
+                    <input type="text" id="nom" name="nom" placeholder="Votre nom" required>
+                    <label for="prenom">Prénom *</label>
+                    <input type="text" id="prenom" name="prenom" placeholder="Votre prénom" required>
+                    <label for="mail">Mail *</label>
+                    <input type="mail" id="mail" name="mail" placeholder="mail" required>
+                    <label for="password">Choisir votre mot de passe *</label>
+                    <input type="password" id="password" name="password" placeholder="Votre mot de passe" required>
+                    <input type="submit" value="VALIDER VOTRE COMPTE">
+                </fieldset>
+            </form>
+        </section>
+    </footer>
+</body>
+</html>
