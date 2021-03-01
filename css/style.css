@@ -13,22 +13,20 @@ header nav ul {
     top: 0;
     display: flex;
     background-color: #ffffff;
-    height: 5.5rem;
+    height: 6rem;
     width: 100%;
-    box-shadow: 0 0 0.5rem #222;
+    box-shadow: 0 0 0.3rem #222;
     z-index: 1;
+    border-bottom: solid 0.1rem #A9A7A6;
 }
 
 header nav ul li a {
     display: flex;
     align-items: center;
-}
-
-header nav ul li a {
     text-transform: uppercase;
-    color: gray;
     height: 100%;
     padding: 0 3rem;
+    color: #1A1A1A;
 }
 
 header nav ul li:first-child {
@@ -39,6 +37,8 @@ header nav ul li:first-child a {
     text-transform: capitalize;
     padding: 0;
     margin-left: 1.5rem;
+    font-size: 2.5rem;
+    color: #A9A7A6;
 }
 
 header nav ul li:first-child a::before {
@@ -62,7 +62,7 @@ header section h1 {
 }
 
 header section a {
-    color: #fafafa;
+    color: #ffffff;
     background-color: var(--navBtnColorSelected);
     display: inline-block;
     padding: 1.5rem;
@@ -83,7 +83,7 @@ header nav:last-child a {
 
 .selected {
     background-color: var(--navBtnColorSelected);
-    color: #fafafa;
+    color: #ffffff;
 }
 
 footer {
@@ -110,10 +110,6 @@ footer section h2 {
 
 footer section p {
     text-align: center;
-}
-
-footer form {
-    padding-bottom: 1rem;
 }
 
 footer form fieldset {

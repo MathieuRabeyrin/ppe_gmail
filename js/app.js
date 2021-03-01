@@ -1,8 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const btnIcon = document.querySelector('nav > a');
+
+  const changeIcon = (name, id) => {
+    btnIcon.firstChild.src = `./assets/${name}`;
+    btnIcon.href = id;
+  }
+
   window.addEventListener('scroll', () => {
     if (window.innerHeight + Math.ceil(window.pageYOffset) >= document.body.offsetHeight)
-      console.log("bas de page");
-    if (window.pageYOffset == 0)
-      console.log("haut de page");
+      changeIcon("arrow_up.png", "#");
+    else
+      changeIcon("arrow_down.png", "#create");
   });
 });
