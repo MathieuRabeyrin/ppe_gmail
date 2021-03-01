@@ -4,7 +4,7 @@
 
 header {
     height: 100vh;
-    background: url(../assets/home-hero.jpg) fixed no-repeat;
+    background: url(../assets/home-hero.jpg) fixed no-repeat center;
     background-size: cover;
 }
 
@@ -68,6 +68,19 @@ header section a {
     padding: 1.5rem;
 }
 
+header nav:last-child a {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1000;
+    position: fixed;
+    background-color: var(--navBtnColorSelected);
+    border-radius: 50%;
+    padding: 1rem;
+    margin: 2rem;
+    box-shadow: 0 0.8rem 1rem #222;
+}
+
 .selected {
     background-color: var(--navBtnColorSelected);
     color: #fafafa;
@@ -92,15 +105,31 @@ footer section div {
 footer section h2 {
     text-align: center;
     margin-bottom: 3rem;
+    font-weight: 300;
 }
 
 footer section p {
     text-align: center;
 }
 
-footer section form fieldset {
-    border: solid 0.1rem #222;
+footer form {
+    padding-bottom: 1rem;
+}
+
+footer form fieldset {
+    border: solid 0.1rem #dedede;
     border-radius: 0.5rem;
+    background-color: #ffffff;
+}
+
+footer section form fieldset legend {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    padding: 0 1rem;
+}
+
+footer section form fieldset label {
+    font-size: 1.5rem;
 }
 
 footer section form fieldset input {
@@ -108,18 +137,19 @@ footer section form fieldset input {
     width: 100%;
     line-height: 3.5rem;
     border: none;
-    
+    margin-top: 0.5rem;
+    padding: 0.5rem;
 }
 
 footer section form fieldset input:not(:last-child) {
-    border-bottom: solid 0.1rem green;
-    background-color: gray;
+    border-bottom: solid 0.1rem #d3d3d3;
+    background-color: #f8f5f5;
     margin-bottom: 1rem;
 }
 
 footer section form fieldset input[type="submit"] {
     margin: 0 auto;
-    background-color: blue;
+    background-color: #1a73e8;
     color: #ffffff;
     margin-top: 0.5rem;
     width: 40%;
