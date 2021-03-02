@@ -91,13 +91,13 @@ footer {
 }
 
 footer section {
-    max-width: 70rem;
+    max-width: 80rem;
     margin: 0 auto;
     padding-top: 10rem;
 }
 
 footer section div {
-    width: 50%;
+    width: 45%;
     margin: 0 auto;
     margin-bottom: 4rem;
 }
