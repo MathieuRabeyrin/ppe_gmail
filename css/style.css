@@ -1,10 +1,15 @@
 :root {
     --navBtnColorSelected: #dd5347;
+    --navBorderColor: #A9A7A6;
+    --colorGmailLogo: #A9A7A6;
+    --fieldsetBorderColor: #dedede;
+    --inputBgColor: #f8f5f5;
+    --submitBgColor: #1a73e8;
 }
 
 header {
     height: 100vh;
-    background: url(../assets/home-hero.jpg) fixed no-repeat;
+    background: url(../assets/home-hero.jpg) fixed no-repeat center;
     background-size: cover;
 }
 
@@ -17,7 +22,7 @@ header nav ul {
     width: 100%;
     box-shadow: 0 0 0.3rem #222;
     z-index: 1;
-    border-bottom: solid 0.1rem #A9A7A6;
+    border-bottom: solid 0.1rem var(--navBorderColor);
 }
 
 header nav ul li a {
@@ -26,7 +31,7 @@ header nav ul li a {
     text-transform: uppercase;
     height: 100%;
     padding: 0 3rem;
-    color: #1A1A1A;
+    color: #222;
 }
 
 header nav ul li:first-child {
@@ -38,7 +43,7 @@ header nav ul li:first-child a {
     padding: 0;
     margin-left: 1.5rem;
     font-size: 2.5rem;
-    color: #A9A7A6;
+    color: var(--colorGmailLogo);
 }
 
 header nav ul li:first-child a::before {
@@ -54,10 +59,10 @@ header section {
 }
 
 header section h1 {
-    color: #fafafa;
+    color: #ffffff;
+    line-height: 6.5rem;
+    font-size: 5rem;
     font-weight: 300;
-    line-height: 5rem;
-    font-size: 4rem;
     margin-bottom: 1.5rem;
 }
 
@@ -115,7 +120,7 @@ footer section p {
 }
 
 footer form fieldset {
-    border: solid 0.1rem #dedede;
+    border: solid 0.1rem var(--fieldsetBorderColor);
     border-radius: 0.5rem;
     background-color: #ffffff;
 }
@@ -140,14 +145,14 @@ footer section form fieldset input {
 }
 
 footer section form fieldset input:not(:last-child) {
-    border-bottom: solid 0.1rem #d3d3d3;
-    background-color: #f8f5f5;
+    border-bottom: solid 0.1rem var(--fieldsetBorderColor);
+    background-color: var(--inputBgColor);
     margin-bottom: 1rem;
 }
 
 footer section form fieldset input[type="submit"] {
     margin: 0 auto;
-    background-color: #1a73e8;
+    background-color: var(--submitBgColor);
     color: #ffffff;
     margin-top: 0.5rem;
     width: 40%;
