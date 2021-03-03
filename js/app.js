@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     if (window.innerHeight + Math.ceil(window.pageYOffset) >= document.body.offsetHeight)
-      changeIcon("arrow_up.png", "#");
+      changeIcon("arrow_up.svg", "#");
     else
       changeIcon("arrow_down.png", "#create");
   });

@@ -52,28 +52,6 @@ header nav ul li:first-child a::before {
     margin-top: 1rem;
 }
 
-header section {
-    top: 30%;
-    position: absolute;
-    left: 10%;
-    max-width: 30%;
-}
-
-header section h1 {
-    color: #ffffff;
-    line-height: 6.5rem;
-    font-size: 5rem;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-}
-
-header section a {
-    color: #ffffff;
-    background-color: var(--navBtnColorSelected);
-    display: inline-block;
-    padding: 2rem;
-}
-
 header nav:last-child a {
     position: absolute;
     bottom: 0;
@@ -85,6 +63,28 @@ header nav:last-child a {
     padding: 1rem;
     margin: 2rem;
     box-shadow: 0 0.8rem 1rem #222;
+}
+
+main {
+    top: 30%;
+    position: absolute;
+    left: 10%;
+    max-width: 30%;
+}
+
+main h1 {
+    color: #ffffff;
+    line-height: 6.5rem;
+    font-size: 5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+}
+
+main a {
+    color: #ffffff;
+    background-color: var(--navBtnColorSelected);
+    display: inline-block;
+    padding: 2rem;
 }
 
 footer {
