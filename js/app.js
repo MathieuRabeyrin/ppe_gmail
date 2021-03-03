@@ -10,6 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (window.innerHeight + Math.ceil(window.pageYOffset) >= document.body.offsetHeight)
       changeIcon("arrow_up.svg", "#");
     else
-      changeIcon("arrow_down.png", "#create");
+      changeIcon("arrow_down.svg", "#create");
   });
 });
