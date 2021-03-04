@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const user = new Form(data.get('prenom'), data.get('nom'), data.get('mail'), data.get('password'));
 
     if (user.checkForm()) {
-      console.log(true);
+      new Toast('Compte créer', 'success').display();
     }
   });
 });

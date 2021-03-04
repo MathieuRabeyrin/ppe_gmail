@@ -52,11 +52,11 @@ class Form {
 
   checkForm() {
     if (!this.checkEmpty()) {
-      new Toast('Les champs sont obligatoires', 'error').display();
+      new Toast('Les champs sont obligatoires', 'alert').display();
       return false;
     }
     if (!this.checkMail()) {
-      new Toast('Email invalide', 'error').display();
+      new Toast('Email invalide', 'alert').display();
       return false;
     }
     return true;
