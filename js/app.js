@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   const btnIcon = document.querySelector('nav > a');
 
-  const changeIcon = (name, id) => {
-    btnIcon.firstChild.src = `./assets/${name}`;
-    btnIcon.href = id;
+
+  const rotateIcon = (className, link) => {
+    btnIcon.href = link;
+    btnIcon.firstChild.classList.toggle('rotation');
   }
 
   window.addEventListener('scroll', () => {
-    if (window.innerHeight + Math.ceil(window.pageYOffset) >= document.body.offsetHeight)
-      changeIcon("arrow_up.svg", "#");
-    else
-      changeIcon("arrow_down.png", "#create");
+    if (window.innerHeight + Math.ceil(window.pageYOffset) >= document.body.offsetHeight) {
+      btnIcon.firstChild.classList.add('rotation');
+      btnIcon.href = "#";
+    } else {
+      btnIcon.firstChild.classList.remove('rotation');
+      btnIcon.href = "#create";
+    }
   });
 });
