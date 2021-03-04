@@ -4,10 +4,13 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('scroll', () => {
     if (window.innerHeight + Math.ceil(window.pageYOffset) >= document.body.offsetHeight) {
       btnIcon.firstChild.classList.add('rotation');
-      btnIcon.href = "#";
+      btnIcon.firstChild.classList.remove('resetRotation');
+      btnIcon.setAttribute('href', '#');
     } else {
+      if (btnIcon.firstChild.classList.contains('rotation'))
+        btnIcon.firstChild.classList.add('resetRotation');
       btnIcon.firstChild.classList.remove('rotation');
-      btnIcon.href = "#create";
+      btnIcon.setAttribute('href', '#create');
     }
   });
 });

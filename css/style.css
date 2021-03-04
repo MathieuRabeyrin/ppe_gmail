@@ -160,5 +160,41 @@ footer section form fieldset input[type="submit"] {
 }
 
 .rotation {
-    transform: rotate(180deg);
+    transform: rotate(-180deg);
+    transition-duration: 0.3s;
+}
+
+.resetRotation {
+    transform: rotate(-360deg);
+    transition-duration: 0.3s;
+}
+
+
+.toast {
+    color: white;
+    max-width: 50rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.toast::before {
+    margin: 0.5rem;
+    /*margin-right: auto;*/
+}
+
+.error {
+    background-color: var(--navBtnColorSelected);
+}
+
+.error::before {
+    content: url(../assets/alert.svg);
 }
