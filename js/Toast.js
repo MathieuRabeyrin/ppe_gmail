@@ -41,7 +41,7 @@ class Toast {
 
   display() {
     const div = document.querySelector("div[role='alert']");
-    const map  = {alert: '#dd5347', success: '#28a745'};
+    const map  = {alert: '#B43524', success: '#28a745'};
     
     if (div.childElementCount > 0)
       this.#removeChilds(div);

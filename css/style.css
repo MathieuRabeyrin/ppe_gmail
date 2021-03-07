@@ -1,12 +1,14 @@
 :root {
-    --navBtnColorSelected: #dd5347;
+    --btnColor: #B43524;
     --navBorderColor: #A9A7A6;
-    --colorGmailLogo: #A9A7A6;
+    --colorGmailLogo: #796B67;
     --fieldsetBorderColor: #dedede;
     --inputBgColor: #f8f5f5;
     --submitBgColor: #1a73e8;
     --toastBgColor: none;
 }
+
+/* #B52E21 */
 
 header {
     height: 100vh;
@@ -59,7 +61,7 @@ header nav:last-child a {
     right: 0;
     z-index: 1000;
     position: fixed;
-    background-color: var(--navBtnColorSelected);
+    background-color: var(--btnColor);
     border-radius: 50%;
     padding: 1rem;
     margin: 2rem;
@@ -83,7 +85,7 @@ main h1 {
 
 main a {
     color: #ffffff;
-    background-color: var(--navBtnColorSelected);
+    background-color: var(--btnColor);
     display: inline-block;
     padding: 2rem;
 }
@@ -156,7 +158,7 @@ footer section form fieldset input[type="submit"] {
 }
 
 .selected {
-    background-color: var(--navBtnColorSelected);
+    background-color: var(--btnColor);
     color: #ffffff;
 }
 
@@ -179,7 +181,7 @@ footer section form fieldset input[type="submit"] {
     margin: 0 auto;
     padding: 0.5rem;
     border-radius: 0.5rem;
-    font-size: 2.5rem;
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     background-color: var(--toastBgColor);
 }
@@ -192,4 +194,10 @@ footer section form fieldset input[type="submit"] {
 .toast img:last-child {
     margin-right: 0.5rem;
     stroke: #ffffff;
+    cursor: pointer;
+    border: solid .1rem transparent;
+}
+
+.toast img:last-child:hover {
+    border: solid .1rem #ffffff;
 }
