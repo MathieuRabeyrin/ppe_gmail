@@ -20,11 +20,17 @@ class Toast {
     return this.type;
   }
 
+  /*
+    Supprime le contenu de la div[role='alert']
+  */
   #removeChilds(div) {
     while (div.lastChild)
       div.lastChild.remove();
   }
 
+  /*
+    Ajoute les events au toast
+  */
   #setEvent(div) {
     div.lastChild.addEventListener('click', () => {
       this.#removeChilds(div);

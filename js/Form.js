@@ -38,24 +38,24 @@ class Form {
     return this.password;
   }
 
-  checkMail() {
+  #checkMail() {
     let expr = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
     return expr.test(this.mail);
   }
 
-  checkEmpty() {
+  #isEmpty() {
     for (let key in this)
       if (this[key].length == 0)
-        return false;
-    return true;
+        return true;
+    return false;
   }
 
   checkForm() {
-    if (!this.checkEmpty()) {
+    if (this.#isEmpty()) {
       new Toast('Les champs sont obligatoires', 'alert').display();
       return false;
     }
-    if (!this.checkMail()) {
+    if (!this.#checkMail()) {
       new Toast('Email invalide', 'alert').display();
       return false;
     }

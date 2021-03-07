@@ -1,3 +1,5 @@
+// fichier pour l'animation de l'arrow
+
 document.addEventListener('DOMContentLoaded', () => {
   const btnIcon = document.querySelector('nav > a');
 

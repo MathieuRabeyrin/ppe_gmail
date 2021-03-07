@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (user.checkForm()) {
       new Toast('Compte créer', 'success').display();
+      setTimeout(() => {
+        window.location = "connexion.html";
+      }, 1000);
     }
   });
 });

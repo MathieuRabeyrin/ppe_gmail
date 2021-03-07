@@ -1,0 +1,51 @@
+/* fichier css du menu */
+
+:root {
+    --btnColor: #B43524;
+    --navBorderColor: #A9A7A6;
+    --colorGmailLogo: #796B67;
+}
+
+header nav ul {
+    position: fixed;
+    top: 0;
+    display: flex;
+    background-color: #ffffff;
+    height: 6rem;
+    width: 100%;
+    box-shadow: 0 0 0.3rem #222;
+    z-index: 1;
+    border-bottom: solid 0.1rem var(--navBorderColor);
+}
+
+header nav ul li a {
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    height: 100%;
+    padding: 0 3rem;
+    color: #222;
+}
+
+header nav ul li:first-child {
+    margin-right: auto;
+}
+
+header nav ul li:first-child a {
+    text-transform: capitalize;
+    padding: 0;
+    margin-left: 1.5rem;
+    font-size: 2.5rem;
+    color: var(--colorGmailLogo);
+}
+
+header nav ul li:first-child a::before {
+    content: url(../assets/mail.png);
+    margin-right: 0.5rem;
+    margin-top: 1rem;
+}
+
+.active {
+    background-color: var(--btnColor);
+    color: #ffffff;
+}

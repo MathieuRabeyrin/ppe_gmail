@@ -1,58 +1,13 @@
 :root {
-    --btnColor: #B43524;
-    --navBorderColor: #A9A7A6;
-    --colorGmailLogo: #796B67;
     --fieldsetBorderColor: #dedede;
     --inputBgColor: #f8f5f5;
     --submitBgColor: #1a73e8;
-    --toastBgColor: none;
 }
-
-/* #B52E21 */
 
 header {
     height: 100vh;
     background: url(../assets/home-hero.jpg) fixed no-repeat center;
     background-size: cover;
-}
-
-header nav ul {
-    position: fixed;
-    top: 0;
-    display: flex;
-    background-color: #ffffff;
-    height: 6rem;
-    width: 100%;
-    box-shadow: 0 0 0.3rem #222;
-    z-index: 1;
-    border-bottom: solid 0.1rem var(--navBorderColor);
-}
-
-header nav ul li a {
-    display: flex;
-    align-items: center;
-    text-transform: uppercase;
-    height: 100%;
-    padding: 0 3rem;
-    color: #222;
-}
-
-header nav ul li:first-child {
-    margin-right: auto;
-}
-
-header nav ul li:first-child a {
-    text-transform: capitalize;
-    padding: 0;
-    margin-left: 1.5rem;
-    font-size: 2.5rem;
-    color: var(--colorGmailLogo);
-}
-
-header nav ul li:first-child a::before {
-    content: url(../assets/mail.png);
-    margin-right: 0.5rem;
-    margin-top: 1rem;
 }
 
 header nav:last-child a {
@@ -157,11 +112,6 @@ footer section form fieldset input[type="submit"] {
     width: 40%;
 }
 
-.selected {
-    background-color: var(--btnColor);
-    color: #ffffff;
-}
-
 .rotation {
     transform: rotate(-180deg);
     transition-duration: 0.3s;
@@ -170,34 +120,4 @@ footer section form fieldset input[type="submit"] {
 .resetRotation {
     transform: rotate(-360deg);
     transition-duration: 0.3s;
-}
-
-.toast {
-    color: white;
-    width: 65%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 0.5rem;
-    border-radius: 0.5rem;
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    background-color: var(--toastBgColor);
-}
-
-.toast img:first-child {
-    margin-left: 0.5rem;
-    stroke: #ffffff;
-}
-
-.toast img:last-child {
-    margin-right: 0.5rem;
-    stroke: #ffffff;
-    cursor: pointer;
-    border: solid .1rem transparent;
-}
-
-.toast img:last-child:hover {
-    border: solid .1rem #ffffff;
 }
