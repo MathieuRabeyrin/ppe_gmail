@@ -1,23 +1,14 @@
-class Toast {
-  constructor(message, type) {
+class ToastError {
+  constructor(message) {
     this.message = message;
-    this.type = type;
   }
 
   setMessage(message) {
     this.message = message;
   }
 
-  setType(type) {
-    this.type = type;
-  }
-
   getMessage() {
     return this.message;
-  }
-
-  getType() {
-    return this.type;
   }
 
   /*
@@ -47,18 +38,17 @@ class Toast {
 
   display() {
     const div = document.querySelector("div[role='alert']");
-    const map  = {alert: '#eb0000', success: '#28a745'};
     
     if (div.childElementCount > 0)
       this.#clearPreviousToast(div);
     
     // construction du toast
     div.classList.add('toast');
-    const html = `<img src="./assets/${this.type}.svg" alt="${this.type}">
+    const html = `<img src="./assets/alert.svg" alt="erreur">
                   <p>${this.message}</p>
                   <img tabindex="0" src="./assets/x.svg" alt="fermer">`;
     const fragment = document.createRange().createContextualFragment(html);
-    document.documentElement.style.setProperty('--toastBgColor', map[this.type]);
+    document.documentElement.style.setProperty('--toastBgColor', '#eb0000');
     div.appendChild(fragment);
     this.#setEvent(div);
   }
