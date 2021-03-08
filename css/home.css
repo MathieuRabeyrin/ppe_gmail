@@ -1,3 +1,7 @@
+:root {
+    --btnColor: #B43524;
+}
+
 header {
     height: 100vh;
     background: url(../assets/home-hero.jpg) fixed no-repeat center;

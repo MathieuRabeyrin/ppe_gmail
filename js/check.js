@@ -1,8 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const btnSubmit = document.querySelector("input[type='submit'");
-
-  while (localStorage.length > 0)
-    localStorage.removeItem(localStorage.key(0))
+  localStorage.clear();
 
   btnSubmit.addEventListener('click', (e) => {
     e.preventDefault();
@@ -11,8 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (user.checkForm()) {
       new Toast('Compte créer', 'success').display();
-      for (let [key, value] of data.entries())
-        localStorage.setItem(key, value);
+      localStorage.setItem('prenom', data.get('prenom'));
+      localStorage.setItem('mail', data.get('mail'));
       setTimeout(() => {
         window.location = "connexion.html";
       }, 1000);
