@@ -23,7 +23,7 @@ class Toast {
   /*
     Supprime le contenu de la div[role='alert']
   */
-  #removeChilds(div) {
+  #clearPreviousToast(div) {
     while (div.lastChild)
       div.lastChild.remove();
   }
@@ -33,13 +33,13 @@ class Toast {
   */
   #setEvent(div) {
     div.lastChild.addEventListener('click', () => {
-      this.#removeChilds(div);
+      this.#clearPreviousToast(div);
       div.classList.remove('toast');
     });
 
     div.lastChild.addEventListener('keydown', (e) => {
       if (e.key == 'Enter') {
-        this.#removeChilds(div);
+        this.#clearPreviousToast(div);
         div.classList.remove('toast');
       }
     });
@@ -47,22 +47,19 @@ class Toast {
 
   display() {
     const div = document.querySelector("div[role='alert']");
-    const map  = {alert: '#B43524', success: '#28a745'};
+    const map  = {alert: '#eb0000', success: '#28a745'};
     
     if (div.childElementCount > 0)
-      this.#removeChilds(div);
-
+      this.#clearPreviousToast(div);
+    
+    // construction du toast
     div.classList.add('toast');
-    div.appendChild(document.createElement('img'));
-    div.lastChild.src = `./assets/${this.type}.svg`;
-    div.lastChild.alt = this.type;
-    div.appendChild(document.createElement('p'));
-    div.lastChild.innerText = this.message;
-    div.appendChild(document.createElement('img'));
-    div.lastChild.src = "./assets/x.svg";
-    div.lastChild.alt = "fermer";
-    div.lastChild.tabIndex = 0;
+    const html = `<img src="./assets/${this.type}.svg" alt="${this.type}">
+                  <p>${this.message}</p>
+                  <img tabindex="0" src="./assets/x.svg" alt="fermer">`;
+    const fragment = document.createRange().createContextualFragment(html);
     document.documentElement.style.setProperty('--toastBgColor', map[this.type]);
+    div.appendChild(fragment);
     this.#setEvent(div);
   }
 }

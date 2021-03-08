@@ -1,7 +1,5 @@
 :root {
-    --fieldsetBorderColor: #dedede;
-    --inputBgColor: #f8f5f5;
-    --submitBgColor: #1a73e8;
+    --btnColor: #B43524;
 }
 
 header {
@@ -10,7 +8,7 @@ header {
     background-size: cover;
 }
 
-header nav:last-child a {
+.arrow {
     position: absolute;
     bottom: 0;
     right: 0;
@@ -71,45 +69,6 @@ footer section h2 {
 
 footer section p {
     text-align: center;
-}
-
-footer form fieldset {
-    border: solid 0.1rem var(--fieldsetBorderColor);
-    border-radius: 0.5rem;
-    background-color: #ffffff;
-}
-
-footer section form fieldset legend {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    padding: 0 1rem;
-}
-
-footer section form fieldset label {
-    font-size: 1.5rem;
-}
-
-footer section form fieldset input {
-    display: block;
-    width: 100%;
-    line-height: 3.5rem;
-    border: none;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-}
-
-footer section form fieldset input:not(:last-child) {
-    border-bottom: solid 0.1rem var(--fieldsetBorderColor);
-    background-color: var(--inputBgColor);
-    margin-bottom: 1rem;
-}
-
-footer section form fieldset input[type="submit"] {
-    margin: 0 auto;
-    background-color: var(--submitBgColor);
-    color: #ffffff;
-    margin-top: 0.5rem;
-    width: 40%;
 }
 
 .rotation {
