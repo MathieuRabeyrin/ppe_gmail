@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const user = new Form(data.get('prenom'), data.get('nom'), data.get('mail'), data.get('password'));
 
     if (user.checkForm()) {
-      new ToastError('Compte créer', 'success').display();
       localStorage.setItem('prenom', data.get('prenom'));
       localStorage.setItem('mail', data.get('mail'));
+      window.location = "/connexion.html";
     }
   });
 });
