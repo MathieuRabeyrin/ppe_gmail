@@ -3,14 +3,14 @@ document.addEventListener('DOMContentLoaded', () => {
   localStorage.clear();
 
   btnSubmit.addEventListener('click', (e) => {
-    e.preventDefault();
+    //e.preventDefault();
     const data = new FormData(document.querySelector('form'));
     const user = new Form(data.get('prenom'), data.get('nom'), data.get('mail'), data.get('password'));
 
     if (user.checkForm()) {
       localStorage.setItem('prenom', data.get('prenom'));
       localStorage.setItem('mail', data.get('mail'));
-      window.location = "/connexion.html";
+      //window.location = "/connexion.html";
     }
   });
 });
