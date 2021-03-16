@@ -1,10 +1,17 @@
 <?php
-
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        include_once("./pdo.inc.php");
-        
+        function checkCRSF_TOKEN() {
+            session_start();
+
+            if (!isset($_SESSION['token']) || !isset($_POST['csrf_token']))
+                return FALSE;
+            if (hash_equals($_SESSION['token'], $_POST['csrf_token']))
+                return TRUE;
+            return FALSE;
+        }
+
         function checkPostKeysAndEmptyValues() {
-            $map_name = ['nom', 'prenom', 'mail', 'password'];
+            $map_name = ['nom', 'prenom', 'mail', 'password', 'csrf_token'];
 
             if (sizeof($map_name) != sizeof($_POST))
                 return FALSE;
@@ -20,8 +27,10 @@
                 return TRUE;
             return FALSE;
         }
-        
-        if (checkPostKeysAndEmptyValues() && checkEmail()) {
+
+        if (checkCRSF_TOKEN() && checkPostKeysAndEmptyValues() && checkEmail()) {
+            include_once("./pdo.inc.php");
+
             try {
                 $query = $bdd->prepare("INSERT INTO user_mail (nom, prenom, mail, password) VALUES (?, ?, ?, ?)");
                 $query->execute([$_POST['nom'], $_POST['prenom'], $_POST['mail'], $_POST['password']]);
@@ -29,11 +38,8 @@
             } catch (Exception $e) {
                 die ("Erreur : " .$e->getMessage());
             }
-        } else {
-            print("erreur dans le formulaire");
         }
-
     } else {
-        print("mauvaise methode");
+        print("405 Method Not Allowed");
     }
 ?>
