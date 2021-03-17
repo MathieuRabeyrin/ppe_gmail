@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const btnSubmit = document.querySelector("input[type='submit'");
+  const mailInput = document.querySelector("input[type='email'");
   localStorage.clear();
 
   btnSubmit.addEventListener('click', (e) => {
@@ -11,5 +12,9 @@ document.addEventListener('DOMContentLoaded', () => {
       localStorage.setItem('mail', data.get('mail'));
     } else
       e.preventDefault();
+  });
+
+  mailInput.addEventListener('change', () => {
+    Form.isMailUsed(mailInput.value);
   });
 });

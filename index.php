@@ -41,7 +41,11 @@
                 <h2 id="heading">Une boîte de réception entièrement repensée</h2>
                 <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité.</p>
             </div>
-            <div role="alert"></div>
+            <div role="alert" class="toast hide">
+                <img src="./assets/alert.svg" alt="erreur">
+                <p></p>
+                <img tabindex="0" src="./assets/x.svg" alt="fermer">
+            </div>
             <form action="./src/add.inc.php" method="POST">
                 <fieldset>
                     <legend>Créer un compte</legend>
@@ -60,7 +64,6 @@
         </section>
     </footer>
     <script src="./js/Form.js"></script>
-    <script src="./js/Toast.js"></script>
     <script src="./js/arrow.js"></script>
     <script src="./js/check.js"></script>
 </body>

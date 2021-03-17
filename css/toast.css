@@ -1,5 +1,5 @@
 :root {
-    --toastBgColor: none;
+    --toastBgColor: #eb0000;
 }
 
 .toast {
@@ -30,4 +30,8 @@
 
 .toast img:last-child:hover {
     border: solid .1rem #ffffff;
+}
+
+.hide {
+    display: none;
 }
