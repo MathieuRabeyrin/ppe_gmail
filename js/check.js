@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const btnSubmit = document.querySelector("input[type='submit'");
-  const mailInput = document.querySelector("input[type='email'");
+  const btnSubmit = document.querySelector("input[type='submit']");
+  const mailInput = document.querySelector("input[type='email']");
   localStorage.clear();
 
   btnSubmit.addEventListener('click', (e) => {

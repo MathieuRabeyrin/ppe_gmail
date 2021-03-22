@@ -23,12 +23,8 @@
         }
 
         function checkPostKeysAndEmptyValues($input) {
-            $whitelist = ['nom', 'prenom', 'mail', 'password', 'token'];
-
-            if (sizeof($whitelist) != sizeof($input))
-                return FALSE;
-            foreach($whitelist as $key) {
-                if (!isset($input[$key]) || strlen($input[$key]) == 0)
+            foreach($input as $key) {
+                if (!isset($key) || strlen($key) == 0)
                     return FALSE;
             }
             return TRUE;
